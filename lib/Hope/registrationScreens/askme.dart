@@ -121,7 +121,10 @@ class _AlertingState extends State<Alerting> {
                     backgroundColor: const Color(0xB38aa893),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
-                child: const Text("cancel")),
+                child: Text(
+                  "cancel",
+                  style: AppTextStyles.button,
+                )),
             ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
@@ -134,7 +137,10 @@ class _AlertingState extends State<Alerting> {
                     backgroundColor: const Color(0xB38aa893),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50))),
-                child: const Text("ok"))
+                child: const Text(
+                  "   ok   ",
+                  style: AppTextStyles.button,
+                ))
           ],
         ),
       ],

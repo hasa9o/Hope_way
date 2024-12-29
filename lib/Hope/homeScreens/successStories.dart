@@ -2,8 +2,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:hope_way_app/Hope/homeScreens/saveMedia/savedMedia.dart';
 import 'package:provider/provider.dart';
-
 import '../animation/storyTopPeople.dart';
+import '../style_fonts_colors/textStyle.dart';
 import 'interactions/interactions.dart';
 import 'interactions/text.dart';
 
@@ -19,7 +19,11 @@ class _SuccessStoriesPageState extends State<SuccessStoriesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: (AppBar(
-          title: Text("Stories"),
+          automaticallyImplyLeading: false,
+          title: Text(
+            "Stories",
+            style: AppTextStyles.button,
+          ),
           backgroundColor: Color(0xff225036),
         )),
         body: FadeInUp(
@@ -74,14 +78,15 @@ Column Posts(BuildContext context, String LinkPost) {
           ],
         ),
       ),
-      Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 30, right: 2, bottom: 10),
-            child: Text("klllklkl"),
-          )
-        ],
-      ),
+      Padding(
+          padding: const EdgeInsets.only(top: 5, left: 12, right: 12),
+          child: StoriesText(
+            text: "Lorem ipsum dolor sit amet "
+                "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi "
+                "ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur "
+                "adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          )),
     ],
   );
 }

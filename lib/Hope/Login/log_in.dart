@@ -72,7 +72,7 @@ class _LogInState extends State<LogIn> {
                     child: Column(
                       children: <Widget>[
                         const SizedBox(
-                          height: 45,
+                          height: 25,
                         ),
                         FadeInUp(
                             duration: const Duration(milliseconds: 1400),

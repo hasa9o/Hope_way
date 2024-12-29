@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:hope_way_app/Hope/homeScreens/profile.dart';
+import 'package:hope_way_app/Hope/homeScreens/saveMedia/savedMedia.dart';
+import 'package:hope_way_app/Hope/homeScreens/test.dart';
 import 'package:line_icons/line_icons.dart';
 
+import 'addPhoto.dart';
 import 'home.dart';
+import 'image.dart';
+import 'successStories.dart';
 
 void main() => runApp(MaterialApp(
     builder: (context, child) {
@@ -24,20 +30,12 @@ class _BottomNavigationScreensState extends State<BottomNavigationScreens> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
-  static const List<Widget> _widgetOptions = <Widget>[
+  static List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    Text(
-      'Likes',
-      style: optionStyle,
-    ),
-    Text(
-      'Search',
-      style: optionStyle,
-    ),
-    Text(
-      'Profile',
-      style: optionStyle,
-    ),
+    // Center(child: SamplePlayer()),
+    ImagePickerScreen(),
+    SuccessStoriesPage(),
+    ProflieScreen(),
   ];
 
   @override
@@ -80,8 +78,8 @@ class _BottomNavigationScreensState extends State<BottomNavigationScreens> {
                   text: 'Likes',
                 ),
                 GButton(
-                  icon: LineIcons.search,
-                  text: 'Search',
+                  icon: Icons.auto_stories_outlined,
+                  text: 'Stories',
                 ),
                 GButton(
                   icon: LineIcons.user,

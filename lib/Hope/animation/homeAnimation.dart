@@ -38,6 +38,6 @@ class _AutoHomeAnimationState extends State<AutoHomeAnimation> {
 final List<String> _items = [
   "It's time to SHINE❤️",
   "You are stronger than \nyou think ",
-  "Small steps are better \nthan no steps",
+  "كيف يمكن لبذرة ان تصدق أن هناك \n شجرة ضخمة مخبأة داخلها؟ \n ما تبحث عنه موجود بداخلك",
   "You are made of MAGIC"
 ];

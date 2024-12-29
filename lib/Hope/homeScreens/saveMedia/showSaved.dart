@@ -8,10 +8,6 @@ class SavedPostsPage extends StatelessWidget {
     final saveNotifier = Provider.of<GlobalSaveNotifier>(context);
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xff225036),
-        title: const Text("Saved Posts"),
-      ),
       body: saveNotifier.savedPosts.isEmpty
           ? const Center(child: Text("No saved posts"))
           : ListView.builder(

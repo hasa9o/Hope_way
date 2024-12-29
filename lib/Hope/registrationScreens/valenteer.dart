@@ -24,21 +24,22 @@ class _ValenteerProcessState extends State<ValenteerProcess> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff225036),
+        backgroundColor: const Color(0xff225036),
       ),
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,
                 image: AssetImage("Assets/images/valenteer_bg_image.jpg"))),
         child: FadeInUp(
+          duration: const Duration(milliseconds: 1500),
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: ListView(
               children: [
-                Center(
+                const Center(
                   child: Text(
                     "Submit For Help",
                     style: TextStyle(
@@ -47,16 +48,16 @@ class _ValenteerProcessState extends State<ValenteerProcess> {
                         color: Colors.black),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Column(children: [
                   makeInput(label: "Your Name"),
                   makeInput(label: "Phone Number"),
                   Container(
-                    height: 40,
-                    width: 350,
-                    child: Text(
+                    height: 50,
+                    width: MediaQuery.of(context).size.width * 0.8,
+                    child: const Text(
                       "Choose the suitable time to give your support",
                       style: TextStyle(
                           fontSize: 18,
@@ -75,7 +76,7 @@ class _ValenteerProcessState extends State<ValenteerProcess> {
                             return CheckboxListTile(
                               title: Text(
                                 key,
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.black,
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold),
@@ -88,13 +89,13 @@ class _ValenteerProcessState extends State<ValenteerProcess> {
                               },
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(20),
-                                  side: BorderSide(
+                                  side: const BorderSide(
                                       color: Colors.green, width: 5)),
                               activeColor: Colors.green[700],
                             );
                           }).toList(),
                         ),
-                        Positioned(
+                        const Positioned(
                             bottom: 0,
                             child: Icon(
                               Icons.expand_more_sharp,
@@ -104,7 +105,7 @@ class _ValenteerProcessState extends State<ValenteerProcess> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   ElevatedButton(
@@ -115,7 +116,7 @@ class _ValenteerProcessState extends State<ValenteerProcess> {
                           MaterialPageRoute(
                               builder: (context) => BottomNavigationScreens()));
                     },
-                    child: Text(
+                    child: const Text(
                       "Submit",
                       style: AppTextStyles.button,
                     ),
@@ -135,22 +136,23 @@ class _ValenteerProcessState extends State<ValenteerProcess> {
       children: <Widget>[
         Text(
           label,
-          style: TextStyle(
+          style: const TextStyle(
               fontSize: 15, fontWeight: FontWeight.w400, color: Colors.black),
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         TextField(
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
             enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey.shade400)),
             border: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.grey.shade400)),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 25,
         ),
       ],
